@@ -25,7 +25,7 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 
 • *Sample with temperature control:* **It has a function which you can scale the temperature to whatever you want.**
 
-• *MiniGPT:* **This is a small-scale GPT-like model that can be customizable and lightweight. This will allow NexusLLM to read off the training data provided an**
+• *MiniGPT:* **This is a small-scale GPT-like model that can be customizable and lightweight. This will also allow it to read off the training data provided.**
 
 ---
 
