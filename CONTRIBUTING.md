@@ -7,7 +7,7 @@ This will rule out everything on what you have to do in order to meet our expect
 NexusLLM is a small trasformer, built from stratch. Please keep things simple and understandable so that we all have clarity.
 
 2. **Don't Overengineer:**
-This is *not* a big project, so please keep the code as minimal and readable.
+This is *not* a big project, so please keep the code minimal and readable.
 
 3. **Stick To NumPy For Now:**
 This is the core of the project so no PyTorch, TensorFlow or anyother frame until we say so.
