@@ -103,7 +103,7 @@ def sample(model_fn, input_tokens, num_tokens=30, temperature=1.0):
 history = ""
 print("\nNexusLLM 0.0.1 - Build: Unstable - Training: Partial")
 print("NexusLLM is a transformer-based language model. It generates responses based on limited training provied by the .txt flie.")
-print("\nIf you would like to participate to make this AI better, go join our Discord server to debug and look further into this.")
+print("\nIf you would like to participate to make this AI better, go to the CONTRIBUTING file on GitHub to debug and look further into this.")
 print("Cheers, Sam Harris.")
 print("")
 
