@@ -38,3 +38,13 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 | 0.4     | Stable Build / 10,000 Line of Training | Planned |
 | 0.5     | Stable Build / Community fine-tunes | Planned |
 | 1.0     | Finished Build / 50,000 Lines of Training | Planned for Late 2025 / Late 2026 |
+
+---
+# Comparison: 
+### 0.0.1 Model:
+![Screenshot 2025-05-02 8 37 40 AM](https://github.com/user-attachments/assets/235704e9-147d-4c4e-a116-184c861e02ba)
+
+
+### 0.1 Model:
+![Screenshot 2025-05-02 11 44 59 PM](https://github.com/user-attachments/assets/40ce2ea1-4709-41e6-8af4-2d8379723f88)
+
