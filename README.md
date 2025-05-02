@@ -2,7 +2,7 @@
 
 **NexusLLM** is a experimental transformer-based language model built from scratch using NumPy. It is designed to be simple, debuggable, and open to all contributors.
 
-***[NEW UPDATE: UPGRADING TO MINIGPT - NUMPY IS TOO BROKEN!]***
+***[NEW UPDATE: UPGRADING TO MINGPT - NUMPY IS TOO BROKEN!]***
 
 > *NexGen* Community - *Nex*us / *Gen*eration - A connection between the community.
 
@@ -23,7 +23,7 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 
 • *Sample with temperature control:* **It has a function which you can scale the temperature to whatever you want.**
 
-• *MiniGPT:* **This will allow the NexusLLM to read off the training data provied, unlike NumPY which I thought could.**
+• *MinGPT:* **This will allow the NexusLLM to read off the training data provied, unlike NumPY which I thought could.**
 
 ---
 
