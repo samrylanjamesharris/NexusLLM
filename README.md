@@ -1,6 +1,6 @@
 # NexusLLM - [NexGen Community]:
 
-**NexusLLM** is a experimental transformer-based language model built from scratch using NumPy. It is designed to be simple, debuggable, and open to all contributors.
+**NexusLLM** is a experimental transformer-based language model built using MiniGPT. It is designed to be simple, debuggable, and open to all contributors.
 
 ***[ANNOUNCEMENT: NexusLLM 0.1 will be released at 3:00 PM NZST (UTC+12). This will include the new framework, Torch with MiniGPT installed.]***
 
