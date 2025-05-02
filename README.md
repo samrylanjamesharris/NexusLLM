@@ -8,7 +8,7 @@
 
 # Contributing 🤝:
 Do **you** want to help us make NexusLLM bigger and smarter?
-If you're interested, come join our *Discord server* or to help debug and code!
+If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjamesharris/NexusLLM/blob/main/CONTRIBUTING.md) flie to help debug and code!
 
 ---
 
