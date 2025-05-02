@@ -1,4 +1,4 @@
-v# NexusLLM - [NexGen Community]:
+# NexusLLM - [NexGen Community]:
 
 **NexusLLM** is a experimental transformer-based language model built from scratch using NumPy. It is designed to be simple, debuggable, and open to all contributors.
 
