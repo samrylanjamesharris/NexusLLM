@@ -15,13 +15,15 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 ---
 
 # Features ⚒️:
-• *Multi-head self-attention* **(Applying attention with a causal mask and merging the heads back)**
+• *Multi-head self-attention:* **Applying attention with a causal mask and merging the heads back**
 
-• *Simple transformer* **(It has a standard 2-layer-MLP with layer normalization with a feedforward block.)**
+• *Simple transformer:* **It has a standard 2-layer-MLP with layer normalization with a feedforward block.**
 
-• *Token and position embeddings* **(It has positional embeddings which is essential for all transformations to have)**
+• *Token and position embeddings:* **It has positional embeddings which is essential for all transformations to have**
 
-• *Sample with temperature control* **(It has a function which you can scale the temperature to whatever you want.)**
+• *Sample with temperature control:* **It has a function which you can scale the temperature to whatever you want.**
+
+• *MiniGPT:* **This will allow the NexusLLM to read off the training data provied, unlike NumPY which I thought could.**
 
 ---
 
