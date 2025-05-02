@@ -1,6 +1,6 @@
 # NexusLLM - (NexGen Community):
 
-**NexusLLM** is an experimental transformer-based language model built from scratch using NumPy. It is designed to be simple, debuggable, and open to all contributors.
+**NexusLLM** is a experimental transformer-based language model built from scratch using NumPy. It is designed to be simple, debuggable, and open to all contributors.
 
 > *NexGen* Community - *Nex*us / *Gen*eration - A connection between the community.
 
@@ -8,7 +8,7 @@
 
 # Contributing 🤝:
 Do **you** want to help us make NexusLLM bigger and smarter?
-If you're interested, come join our *Discord server* to help debug and code!
+If you're interested, come join our *Discord server* or to help debug and code!
 
 ---
 
