@@ -33,5 +33,3 @@ If you're interested, come join our *Discord server* or to help debug and code!
 | 0.3.0   | Create a website for NexusLLM| Planned |
 | 0.4.0   | Community fine-tunes + Datasets | Planned |
 | 1.0.0   | Stable release               | Planned for Late 2025 / Late 2026 |
-
-![NexusLLM](https://github.com/user-attachments/assets/0a866166-1b35-4c8d-a99f-3262267023bc)
