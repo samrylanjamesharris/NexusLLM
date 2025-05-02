@@ -29,7 +29,7 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 *Here are our plans so far to make this a better experience:*
 | Version | Focus                        | 	Status |
 |---------|------------------------------|----------|
-| 0.0.1   | Unstable Model               | Current Build |
+| 0.0.1   | Unstable Model / Minimal Training | Current Build |
 | 0.1.0   | Add more training            | Planned |
 | 0.2.0   | Expand upon the Python script| Planned |
 | 0.3.0   | Create a website for NexusLLM| Planned |
