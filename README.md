@@ -1,9 +1,5 @@
-# NexusLLM 0.0.1 (NexGen)
+# NexusLLM (NexGen Community)
 
-**NexusLLM** is a community-driven, lightweight experimental language model built from scratch using NumPy. It’s designed to be simple, hackable, and open for all contributors — from beginners to ML pros.
+**NexusLLM** is a lightweight experimental Large Language Model built from scratch using NumPy. This is designed to be simple, debugable and open for all contributors.
 
-> “Built by the community. For the next generation.”
-
----
-
-## 🚀 Getting Started
+> *NexGen* Community - *Nex*us / *Gen*eration - A connection between the community.
