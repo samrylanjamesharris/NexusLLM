@@ -2,6 +2,8 @@
 
 **NexusLLM** is a experimental built large language model using MiniGPT. It is designed to be simple, debuggable, and open to all contributors.
 
+---
+
 ***[ANNOUNCEMENT: NexusLLM 0.1 will be released at 3:00 PM NZST (UTC+12). This will include the new framework, Torch with MiniGPT included.]***
 
 > *NexGen* Community - *Nex*us / *Gen*eration - A connection between the community.
@@ -23,7 +25,7 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 
 • *Sample with temperature control:* **It has a function which you can scale the temperature to whatever you want.**
 
-• *MiniGPT:* **This will allow the NexusLLM to read off the training data provied, unlike NumPY which I thought could.**
+• *MiniGPT:* **This will allow NexusLLM to read off the training data provied.**
 
 ---
 
@@ -40,11 +42,15 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 | 1.0     | Finished Build / 50,000 Lines of Training | Planned for Late 2025 / Late 2026 |
 
 ---
-# Model Comparison: 
+# Model Comparison 📊: 
 ### 0.0.1 Model:
 ![Screenshot 2025-05-02 8 37 40 AM](https://github.com/user-attachments/assets/235704e9-147d-4c4e-a116-184c861e02ba)
+
+**0.0.1 generates a random string of characters and symbols, this was built from scratch using NumPy and limited data.**
 
 
 ### 0.1 Model:
 ![Screenshot 2025-05-02 11 44 59 PM](https://github.com/user-attachments/assets/40ce2ea1-4709-41e6-8af4-2d8379723f88)
+
+**Using MiniGPT and more information data, NexusLLM 0.1 makes an improvement. While the joke still isn't funny, it now understands English. It indicates that the 0.1 model is starting to learn patterns and sequences of language.**
 
