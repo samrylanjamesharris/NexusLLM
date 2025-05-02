@@ -2,6 +2,8 @@
 
 **NexusLLM** is a experimental transformer-based language model built from scratch using NumPy. It is designed to be simple, debuggable, and open to all contributors.
 
+***(WARNING: NEXUSLMM 0.0.1 IS NOT A STABLE MODEL. IT WILL GUARANTEE TO GENERATE GIBBERISH)***
+
 > *NexGen* Community - *Nex*us / *Gen*eration - A connection between the community.
 
 ---
