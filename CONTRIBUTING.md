@@ -27,3 +27,6 @@ If you want to request a feature, make sure to do through GitHub's Issue tab. It
 
 3. **Code Of Conduct:**
 Make sure to be respectful, even if your disagreeing on something you don't like you need to be calm about it. Always make sure to help others learn, this is how we all connect with each other even if they don't understand it.
+
+Cheers,
+**Sam Harris**
