@@ -118,7 +118,7 @@ while True:
         response_tokens = output_tokens[len(input_tokens):]
         response_text = decode(response_tokens)
         response_text = response_text.split('[USER]')[0].split('\n')[0]
-        print("Bot:", response_text.strip())
+        print(NexusLLM:", response_text.strip())
         history += response_text.strip() + '\n'
 
     except KeyboardInterrupt:
