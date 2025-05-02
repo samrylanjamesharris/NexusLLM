@@ -46,7 +46,7 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 ### 0.0.1 Model - [1.0 Temperature]:
 ![Screenshot 2025-05-02 8 37 40 AM](https://github.com/user-attachments/assets/235704e9-147d-4c4e-a116-184c861e02ba)
 
-**0.0.1 generates a random string of characters and symbols, this was built from scratch using NumPy and limited data.**
+**0.0.1 generates a random string of characters and symbols, this was built from scratch using NumPy and limited data. Even if you gave it all of the information, it would still come out the same since this is toy trasnformer and not LLM.**
 
 
 ### 0.1 Model - [0.7 Temperature]:
