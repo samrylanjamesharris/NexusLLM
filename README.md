@@ -31,8 +31,8 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 *Here are our plans so far to make this a better experience moving on in the furture!*
 | Version | Focus                        | 	Status |
 |---------|------------------------------|----------|
-| 0.0.1   | Experimental Build / 1155 Lines of Training | Outdated |
-| 0.1     | Unstable Build / 1514 Lines of Training + MiniGPT | Current Build |
+| 0.0.1   | Experimental Build / 1000 Lines of Training | Outdated |
+| 0.1     | Unstable Build / 1500 Lines of Training + MiniGPT | Current Build |
 | 0.2     | Unstable Build / 5000 Lines of Training | Planned |
 | 0.3     | Unstable Build / Expand upon Python | Planned |
 | 0.4     | Stable Build / 10,000 Line of Training | Planned |
