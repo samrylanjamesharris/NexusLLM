@@ -33,11 +33,10 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 |---------|------------------------------|----------|
 | 0.0.1   | Experimental Build / 1000 Lines of Training | Outdated |
 | 0.1     | Unstable Build / 1500 Lines of Training + MiniGPT | Current Build |
-| 0.2     | Unstable Build / 5000 Lines of Training | Planned |
-| 0.3     | Unstable Build / Community fixes| Planned |
-| 0.4     | Metastable Build / 10,000 Lines of Training | Planned |
-| 0.5     | Stable Build / Community fixes | Planned |
-| 1.0     | Finished Build / 50,000 Lines of Training | Planned for Late 2025 / Late 2026 |
+| 0.2     | Unstable Build / 5000 Lines of Training | In Development |
+| 0.3     | Metastable Build / 10,000 Lines of Training | Planned |
+| 0.4     | Stable Build / Community Fixes | Planned |
+| 0.5     | Finished Build / 50,000 Lines of Training | Planned for Late 2025 / Late 2026 |
 
 ---
 
@@ -45,11 +44,17 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 ### 0.0.1 Model - [1.0 Temperature]:
 ![Screenshot 2025-05-02 8 37 40 AM](https://github.com/user-attachments/assets/235704e9-147d-4c4e-a116-184c861e02ba)
 
-**0.0.1 generates a random string of characters and symbols, this was built from scratch using NumPy and limited data. Even if you gave it all of the information, it would still come out the same since this is toy trasnformer and not an LLM.**
+**0.0.1 model generates a random string of characters and symbols, this was built from scratch using NumPy and limited data. Even if you gave it all of the information, it would still come out the same since this is toy trasnformer and not an LLM.**
 
 
 ### 0.1 Model - [0.7 Temperature]:
 ![Screenshot 2025-05-02 11 44 59 PM](https://github.com/user-attachments/assets/40ce2ea1-4709-41e6-8af4-2d8379723f88)
 
 **Using MiniGPT and more information data, NexusLLM 0.1 makes an improvement. While the joke still isn't funny, it now understands English. It indicates that the 0.1 model is starting to learn patterns and sequences of language.**
+
+### 0.2 Model - [0.7 Temperature]:
+![0 2](https://github.com/user-attachments/assets/e6b0abfa-c39d-4d1d-a938-e1089191eafa)
+
+**0.2 model uses 5000 lines of information, compared to the 1000 used from the 0.1 model. We are able to see that the AI is now able to finish senctences and say english words properly, (sometimes...) it also has a system prompt it can keep track of what to say or act. Overall, a slight improvement.**
+
 
