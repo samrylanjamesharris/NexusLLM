@@ -35,7 +35,7 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 | 0.1     | Unstable Build / 1500 Lines of Training + MiniGPT | Current Build |
 | 0.2     | Unstable Build / 5000 Lines of Training | In Development |
 | 0.3     | Metastable Build / 10,000 Lines of Training | Planned |
-| 0.4     | Stable Build / Community Fixes | Planned |
+| 0.4     | Stable Build / 20,000 Lines of Training + Community Fixes | Planned |
 | 0.5     | Finished Build / 50,000 Lines of Training | Planned |
 
 ---
