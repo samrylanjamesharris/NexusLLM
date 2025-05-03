@@ -36,7 +36,7 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 | 0.2     | Unstable Build / 5000 Lines of Training | In Development |
 | 0.3     | Metastable Build / 10,000 Lines of Training | Planned |
 | 0.4     | Stable Build / Community Fixes | Planned |
-| 0.5     | Finished Build / 50,000 Lines of Training | Planned for Late 2025 / Late 2026 |
+| 0.5     | Finished Build / 50,000 Lines of Training | Planned |
 
 ---
 
