@@ -16,7 +16,7 @@ n_head = 4
 n_layer = 2
 dropout = 0.1
 
-with open('NexusTraining.txt', 'r', encoding='utf-8') as f:
+with open('0.1/NexusTraining.txt', 'r', encoding='utf-8') as f:
     text = f.read()
 chars = sorted(list(set(text)))
 vocab_size = len(chars)
@@ -131,8 +131,8 @@ class MiniGPT(nn.Module):
         return idx
 model = MiniGPT().to(device)
 
-if os.path.exists("NexusData.pth"):
-    model.load_state_dict(torch.load("NexusData.pth", map_location=device))
+if os.path.exists("0.1/NexusData.pth"):
+    model.load_state_dict(torch.load("0.1/NexusData.pth", map_location=device))
     print("Loaded existing model. Skipping training.")
 else:
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
@@ -145,7 +145,7 @@ else:
         if iter % eval_interval == 0 or iter == max_iters:
             val_loss = model(*get_batch('val'))[1].item()
             print(f"Step {iter}: train loss {loss.item():.4f}, val loss {val_loss:.4f}")
-    torch.save(model.state_dict(), "NexusData.pth")
+    torch.save(model.state_dict(), "0.1/NexusData.pth")
 print("\nNexusLLM 0.1: An experimental large language model.")
 print("Build: [Unstable]")
 print("Lines of Training: [1500]")
