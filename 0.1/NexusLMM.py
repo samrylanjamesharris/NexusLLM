@@ -7,7 +7,7 @@ import os
 
 block_size = 64
 batch_size = 32
-max_iters = 1514
+max_iters = 1500
 eval_interval = 250
 learning_rate = 1e-3
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -172,4 +172,3 @@ while True:
     except KeyboardInterrupt:
         print("\nExiting chat.")
         break
-  
