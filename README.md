@@ -8,6 +8,21 @@
 
 ---
 
+# Installation ⬇️:
+This will show you how to install *NexusLLM 0.1*, make sure you have the latest Python version installed:
+
+1. *Download NexusLMM: Download the latest version of **NexusLMM** and put it wherever, just make sure inside the python file that it's using the right directory.*
+   
+2. *Install Required Packages: Install these listed packages inside the terminal:*
+```pip install torch ```,
+```pip install minigpt```.
+
+3. *Run it: That's all, just make sure to run the script from the project root and it should be good.*
+
+***IF THERE ARE ANY ERRORS OR INCORRECT INFORMATION INSIDE THIS INSTALLTION, MAKE SURE TO LET ME KNOW IN THE ISSUES TAB ON GITHUB AND I'LL ADDRESS THEM AS SOON AS POSSIBLE.***
+
+---
+
 # Contributing 🤝:
 Do **you** want to help us make NexusLLM bigger and smarter?
 If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjamesharris/NexusLLM/blob/main/CONTRIBUTING.md) flie to help debug and code!
