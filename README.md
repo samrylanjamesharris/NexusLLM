@@ -46,28 +46,28 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 *Here are our plans so far to make this a better experience moving on in the furture!*
 | Version | Focus                        | 	Status |
 |---------|------------------------------|----------|
-| 0.0.1   | Experimental Build / 1000 Lines of Training | Outdated |
-| 0.1     | Unstable Build / 1500 Lines of Training + MiniGPT | Current Build |
-| 0.2     | Unstable Build / 5000 Lines of Training | In Development |
-| 0.3     | Unstable Build / 10,000 Lines of Training | Planned |
-| 0.4     | Stable Build / 20,000 Lines of Training + Community Fixes | Planned |
-| 0.5     | Finished Build / 50,000 Lines of Training | Planned |
+| 0.0.1   | Experimental Build / 1000 Lines of Training / 11,000 Tokens | Outdated |
+| 0.1     | Unstable Build / 1500 Lines of Training / 16,000 Tokens / MiniGPT | Current Build |
+| 0.2     | Unstable Build / 5000 Lines of Training / 40,000 Tokens | In Development |
+| 0.3     | Unstable Build / 10,000 Lines of Training / 70,000 Tokens | Planned |
+| 0.4     | Stable Build / 20,000 Lines of Training / 150,000 Tokens / Community Fixes | Planned |
+| 0.5     | Finished Build / 50,000 Lines of Training / 380,000 Tokens | Planned |
 
 ---
 
 # Model Comparison 📊: 
-### 0.0.1 Model - [Oudated]:
+### 0.0.1 Model - [11,000 Tokens]:
 ![Screenshot 2025-05-02 8 37 40 AM](https://github.com/user-attachments/assets/235704e9-147d-4c4e-a116-184c861e02ba)
 
 **0.0.1 model generates a random string of characters and symbols, this was built from scratch using NumPy and limited data. Even if you gave it all of the information, it would still come out the same since this is toy trasnformer and not an LLM.**
 
 
-### 0.1 Model - [Current Build]:
+### 0.1 Model - [16,316 Tokens]:
 ![Screenshot 2025-05-02 11 44 59 PM](https://github.com/user-attachments/assets/40ce2ea1-4709-41e6-8af4-2d8379723f88)
 
 **Using MiniGPT and more information data, NexusLLM 0.1 makes an improvement. While the joke still isn't funny, it now understands English. It indicates that the 0.1 model is starting to learn patterns and sequences of language.**
 
-### 0.2 Model - [In Development]:
+### 0.2 Model - [43,981 Tokens]:
 ![0 2](https://github.com/user-attachments/assets/e6b0abfa-c39d-4d1d-a938-e1089191eafa)
 
 **0.2 model uses 5000 lines of information, compared to the 1000 used from the 0.1 model. We are able to see that the AI is now able to finish senctences and say english words properly, (sometimes...) Overall, a slight improvement.**
