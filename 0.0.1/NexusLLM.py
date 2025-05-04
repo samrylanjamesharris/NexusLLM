@@ -101,10 +101,9 @@ def sample(model_fn, input_tokens, num_tokens=30, temperature=1.0):
     return output
 
 history = ""
-print("\nNexusLLM 0.0.1 - Build: Experimental - Training: 1000")
-print("NexusLLM is a transformer-based language model. It generates responses based on limited training provied by the .txt flie.")
-print("\nIf you would like to participate to make this AI better, go to the CONTRIBUTING file on GitHub to debug and look further into this.")
-print("Cheers, Sam Harris.")
+print("\nNexusLLM 0.0.1: An experimental large language model.")
+print("Build: [Experimental]")
+print("Lines of Training: [1000]")
 print("")
 
 while True:
