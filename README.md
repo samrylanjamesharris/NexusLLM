@@ -48,10 +48,10 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 | Version | Focus                        | 	Status |
 |---------|------------------------------|----------|
 | 0.0.1   | Experimental Build / 1000 Lines of Training / Not Supported | Outdated |
-| 0.1     | Unstable Build / 1500 Lines of Training / 16,316 Tokens / MiniGPT | Current Build |
-| 0.2     | Unstable Build / 5000 Lines of Training / 43,981 Tokens | Planned |
-| 0.3     | Unstable Build / 10,000 Lines of Training / 70,000 Tokens | Planned |
-| 0.4     | Stable Build / 20,000 Lines of Training / 150,000 Tokens / Community Fixes | Planned |
+| 0.1     | Unstable Build / 1500 Lines of Training / 16,316 Tokens / MiniGPT | Oudated |
+| 0.2     | Unstable Build / 5000 Lines of Training / 43,981 Tokens | Current Build |
+| 0.3     | Unstable Build / 10,000 Lines of Training / 70,000 Tokens / NanoGPT | Planned |
+| 0.4     | Stable Build / 20,000 Lines of Training / 150,000 Tokens   | Planned |
 | 0.5     | Finished Build / 50,000 Lines of Training / 380,000 Tokens | Planned |
 
 ---
