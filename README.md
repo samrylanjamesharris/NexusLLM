@@ -15,9 +15,10 @@ This will show you how to install *NexusLLM 0.1*, make sure you have the latest 
    
 2. *Install Packages: Install these listed packages inside the terminal:*
 ```pip install torch ```,
-```pip install minigpt```.
+```pip install minigpt```,
+```pip install numpy```.
 
-3. *Run it: That's all, just make sure to run the script from the project root and it should be good.*
+4. *Run it: That's all, just make sure to run the script from the project root and it should be good.*
 
 ***IF THERE ARE ANY ERRORS OR INCORRECT INFORMATION INSIDE THIS INSTALLTION, MAKE SURE TO LET ME KNOW IN THE ISSUES TAB ON GITHUB AND I'LL ADDRESS THEM AS SOON AS POSSIBLE.***
 
