@@ -7,6 +7,14 @@
 > *NexGen* Community - *Nex*us / *Gen*eration - A connection between the community.
 
 ---
+## Next Update: **NanoGPT**
+The next 0.3 updatte will upgrade from `MiniGPT` to `NanoGPT`. You might be asking why we did this switch:
+
+1. Unlike MiniGPT, NanoGPT can be used to train on large corpora. Such as, OpenWebText.
+2. It has more support on GitHub and other platforms.
+3. It is more scaleable from small to GPT-2 size and beyond.
+
+---
 
 # Installation ⬇️:
 This will show you how to install *NexusLLM 0.1*, make sure you have the latest Python version installed:
