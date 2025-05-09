@@ -12,7 +12,7 @@ The next 0.3 updatte will upgrade from `MiniGPT` to `NanoGPT`. You might be aski
 
 1. Unlike MiniGPT, NanoGPT can be used to train on large corpora. Such as, OpenWebText.
 2. It has more support on GitHub and other platforms.
-3. It is more scaleable from small to GPT-2 size and beyond.
+3. It is more scaleable from small to GPT-2 size and above.
 
 ---
 
