@@ -1,6 +1,6 @@
 # NexusLLM - [NexGen Community]:
 
-**NexusLLM** is a experimental built large language model using MiniGPT. It is designed to be simple, debuggable, and open to all contributors.
+**NexusLLM** is a experimental built large language model using NanoGPT. It is designed to be simple, debuggable, and open to all contributors.
 
 ---
 
@@ -47,7 +47,7 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 
 • *Sample with temperature control:* **It has a function which you can scale the temperature to whatever you want.**
 
-• *MiniGPT:* **This is a small-scale GPT-like model that can be customizable and lightweight. This will also allow it to read off the training data provided.**
+• *NanoGPT:* **This is a small-scale GPT-like model that can be customizable and lightweight. This will also allow it to read off the training data provided.**
 
 ---
 
