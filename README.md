@@ -80,5 +80,3 @@ If you're interested, go read the [CONTRIBUTING](https://github.com/samrylanjame
 ![0 2](https://github.com/user-attachments/assets/e6b0abfa-c39d-4d1d-a938-e1089191eafa)
 
 **0.2 model uses 5000 lines of information, compared to the 1000 used from the 0.1 model. We are able to see that the AI is now able to finish senctences and say english words properly, (sometimes...) Overall, a slight improvement.**
-
-
