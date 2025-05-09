@@ -1,4 +1,4 @@
-# Contributing to (NexusLLM)
+# Contributing to NexusLLM
 Welcome to the NexusLLM project, this is a open source community effort to build a custom transformer-based language model (NanoGPT). I'm so happy you are here to help! This will rule out everything on what you have to do in order to meet our expectations. 
 
 ## Rules:
