@@ -17,9 +17,9 @@ The next 0.3 updatte will upgrade from `MiniGPT` to `NanoGPT`. You might be aski
 ---
 
 # Installation ⬇️:
-This will show you how to install *NexusLLM 0.1*, make sure you have the latest Python version installed:
+This will show you how to install *NexusLLM 0.2*, make sure you have the latest Python version installed:
 
-1. *Download NexusLMM: Download the latest version of **NexusLMM** and put it wherever, just make sure inside the python file that it's using the right directory.*
+1. *Download NexusLMM: Download the latest version of **NexusLMM 0.X** *(X stands for the latest model number.)* and put it wherever, just make sure inside the python file that it's using the right directory.*
    
 2. *Install Packages: Install these listed packages inside the terminal:*
 ```pip install torch ```,
