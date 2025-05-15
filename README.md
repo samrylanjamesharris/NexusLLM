@@ -7,11 +7,11 @@
 > *NexGen* Community - *Nex*us / *Gen*eration - A connection between the community.
 
 ---
-## Next Update: **NanoGPT**
+## Next Update: **NanoGPT** - Releasing Soon
 The next 0.3 updatte will upgrade from `MiniGPT` to `NanoGPT`. You might be asking why we did this switch:
 
 1. Unlike MiniGPT, NanoGPT can be used to train on large corpora. Such as, OpenWebText.
-2. It has more support on GitHub and other platforms.
+2. It has more support and updates on GitHub compared with MiniGPT which was discontinued in 2023 - 2024.
 3. It is more scaleable from small to GPT-2 size and above.
 
 ---
