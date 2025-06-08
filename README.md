@@ -14,7 +14,7 @@ A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for qu
 ### Steps:
 1. Clone the repo:  
    ```bash
-   git clone https://github.com/yourusername/NexusLLM.git
+   git clone https://github.com/samrylanjamesharris/NexusLLM.git
    cd NexusLLM
    
 2. Install dependencies:
