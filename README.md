@@ -5,8 +5,6 @@ A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for qu
 ## Features:
 - **Local & Private**: No data leaves your machine.  
 - **Low Hardware Mode**: Optimized for CPU (GPU optional).   
-- **Typing Animation**: Realistic "thinking" indicator.  
-- **Customizable**: Adjust creativity (`temperature`), response length, and more.
 
 ## Installation:
 ### Prerequisites
@@ -26,5 +24,5 @@ A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for qu
     Download the model (automatically on first run, or manually):
 
 3. Download the model (automatically on first run, or manually):
-- Auto-download: Just run the script! (≈5.5GB)
+- Auto-download: Just run the script. It'll automatically start downloading when you run the script.
 - Manual: Download [Zephyr-7b-beta.Q4_K_M.gguf](https://huggingface.co/TheBloke/zephyr-7B-beta-GGUF) or later models and place it in the project folder.
