@@ -25,4 +25,4 @@ A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for qu
 
 3. Download the model (automatically on first run, or manually):
 - Auto-download: Just run the script. It'll automatically start downloading when you run the script.
-- Manual: Download [Zephyr-7b-beta.Q4_K_M.gguf](https://huggingface.co/TheBloke/zephyr-7B-beta-GGUF) or later models and place it in the project folder.
+- Manual: Download [WizardLM-2-7B-GGUF](https://huggingface.co/MaziyarPanahi/WizardLM-2-7B-GGUF) or later models and place it in the project folder.
