@@ -1,4 +1,4 @@
-# NexusLLM - Local AI 
+# NexusLLM - Local AI:
 
 A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for quick, AI interactions without relying on cloud APIs.
 
@@ -9,7 +9,12 @@ A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for qu
 ## Installation:
 ### Prerequisites
 - Python 3.10+  
-- 8GB+ RAM 
+- 8GB+ RAM
+
+## Recommended Models:
+1. Test: TheBloke/zephyr-7B-beta-GGUF
+2. Beta: MaziyarPanahi/WizardLM-2-7B-GGUF
+3. Stable: TheBloke/Starling-LM-7B-alpha-GGUF
 
 ### Steps:
 1. Clone the repo:  
@@ -25,4 +30,4 @@ A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for qu
 
 3. Download the model (automatically on first run, or manually):
 - Auto-download: Just run the script. It'll automatically start downloading when you run the script.
-- Manual: Download [WizardLM-2-7B-GGUF](https://huggingface.co/MaziyarPanahi/WizardLM-2-7B-GGUF) or later models and place it in the project folder.
+place it in the project folder.
