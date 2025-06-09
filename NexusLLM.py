@@ -3,9 +3,25 @@ import time
 import sys
 import threading
 
-MODEL_NAME = "MaziyarPanahi/WizardLM-2-7B-GGUF"
-MODEL_FILE = "WizardLM-2-7B.Q4_K_M.gguf"
-MODEL_TYPE = "llama"
+print("\nRecommended Models:")
+print("1. Test: (Zephyr-7B)")
+print("2. Beta: (WizardLM-2-7B)")
+print("3. Stable: (Starling-LM-7B)")
+choice = input("Select model (1-3): ").strip()
+
+if choice == "1":
+    MODEL_NAME = "TheBloke/zephyr-7B-beta-GGUF"
+    MODEL_FILE = "zephyr-7b-beta.Q4_K_M.gguf"
+    MODEL_TYPE = "mistral"
+elif choice == "2":
+    MODEL_NAME = "MaziyarPanahi/WizardLM-2-7B-GGUF"
+    MODEL_FILE = "WizardLM-2-7B.Q4_K_M.gguf"
+    MODEL_TYPE = "llama"
+else:
+    MODEL_NAME = "TheBloke/Starling-LM-7B-alpha-GGUF"
+    MODEL_FILE = "starling-lm-7b-alpha.Q4_K_M.gguf"
+    MODEL_TYPE = "mistral"
+
 GPU_LAYERS = 0
 MAX_NEW_TOKENS = 75
 CONTEXT_LENGTH = 4096
@@ -13,9 +29,9 @@ TEMPERATURE = 0.7
 TOP_K = 50
 TOP_P = 0.9
 THREADS = 12
-HISTORY_LIMIT = 3 
+HISTORY_LIMIT = 3
 
-print(f"Loading model...")
+print(f"\nLoading {MODEL_NAME}...")
 
 try:
     model = AutoModelForCausalLM.from_pretrained(
@@ -28,7 +44,6 @@ try:
         batch_size=128,
     )
     print("Model loaded successfully!\n")
-    
 except Exception as e:
     print(f"Error loading model: {e}")
     sys.exit(1)
@@ -88,11 +103,15 @@ def get_bot_response(user_input):
     conversation_history.append({"role": "bot", "content": bot_response})
     return bot_response
 
-print("NexusLLM:")
-print(f"Model: {MODEL_NAME}")
+print("NexusLLM - Final:")
+print(f"Model: {MODEL_NAME.split('/')[-1]}")
 print(f"Threads: {THREADS} | Context: {CONTEXT_LENGTH} tokens")
-print("")
-
+if choice == "1":
+    print("Expected response time: 7-9 seconds\n")
+elif choice == "2":
+    print("Expected response time: 8-12 seconds\n")
+else:
+    print("Expected response time: 18-22 seconds\n")
 while True:
     user_input = input("You: ")
     
