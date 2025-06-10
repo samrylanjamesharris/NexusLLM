@@ -12,9 +12,9 @@ A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for qu
 - 8GB+ RAM
 
 ## Recommended Models:
-1. Test: TheBloke/zephyr-7B-beta-GGUF
-2. Beta: MaziyarPanahi/WizardLM-2-7B-GGUF
-3. Stable: TheBloke/Starling-LM-7B-alpha-GGUF
+1. Mini: TheBloke/zephyr-7B-beta-GGUF
+2. Balanced: MaziyarPanahi/WizardLM-2-7B-GGUF
+3. Quality: TheBloke/Starling-LM-7B-alpha-GGUF
 
 ### Steps:
 1. Clone the repo:  
