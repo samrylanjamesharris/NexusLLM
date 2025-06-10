@@ -4,22 +4,22 @@ import sys
 import threading
 
 print("\nRecommended Models:")
-print("1. Test: (Zephyr-7B)")
-print("2. Beta: (WizardLM-2-7B)")
-print("3. Stable: (Starling-LM-7B)")
+print("1. Fast: (TinyLlama-1.1B)")
+print("2. Balanced: (Zephyr-7B)")
+print("3. Quality: (Mistral-7B-Instruct-v0.2)")
 choice = input("Select model (1-3): ").strip()
 
 if choice == "1":
+    MODEL_NAME = "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF"
+    MODEL_FILE = "tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf"
+    MODEL_TYPE = "llama"
+elif choice == "2":
     MODEL_NAME = "TheBloke/zephyr-7B-beta-GGUF"
     MODEL_FILE = "zephyr-7b-beta.Q4_K_M.gguf"
     MODEL_TYPE = "mistral"
-elif choice == "2":
-    MODEL_NAME = "MaziyarPanahi/WizardLM-2-7B-GGUF"
-    MODEL_FILE = "WizardLM-2-7B.Q4_K_M.gguf"
-    MODEL_TYPE = "llama"
 else:
-    MODEL_NAME = "TheBloke/Starling-LM-7B-alpha-GGUF"
-    MODEL_FILE = "starling-lm-7b-alpha.Q4_K_M.gguf"
+    MODEL_NAME = "TheBloke/Mistral-7B-Instruct-v0.2-GGUF"
+    MODEL_FILE = "mistral-7b-instruct-v0.2.Q4_K_M.gguf"
     MODEL_TYPE = "mistral"
 
 GPU_LAYERS = 0
@@ -31,7 +31,7 @@ TOP_P = 0.9
 THREADS = 12
 HISTORY_LIMIT = 3
 
-print(f"\nLoading {MODEL_NAME}...")
+print("\nLoading Model...")
 
 try:
     model = AutoModelForCausalLM.from_pretrained(
@@ -49,7 +49,7 @@ except Exception as e:
     sys.exit(1)
 
 conversation_history = []
-INITIAL_PROMPT = "You are an AI model called NexusLLM, made to be a helpful and concise AI assistant. Respond conversationally in 1-2 short sentences."
+INITIAL_PROMPT = "You are an AI model called NexusLLM, built to be assistant. You are helpful and coherent with your responses. Respond conversationally in 1-2 very short sentences only."
 
 def trim_history():
     global conversation_history
@@ -103,15 +103,14 @@ def get_bot_response(user_input):
     conversation_history.append({"role": "bot", "content": bot_response})
     return bot_response
 
-print("NexusLLM - Final:")
-print(f"Model: {MODEL_NAME.split('/')[-1]}")
+print("NexusLLM - Multi-Model:")
 print(f"Threads: {THREADS} | Context: {CONTEXT_LENGTH} tokens")
 if choice == "1":
-    print("Expected response time: 7-9 seconds\n")
+    print("Expected response time: 4-6 seconds\n")
 elif choice == "2":
-    print("Expected response time: 8-12 seconds\n")
+    print("Expected response time: 7-13 seconds\n")
 else:
-    print("Expected response time: 18-22 seconds\n")
+    print("Expected response time: 18-30 seconds\n")
 while True:
     user_input = input("You: ")
     
@@ -119,7 +118,7 @@ while True:
         break
     if user_input.lower() == "clear":
         conversation_history = []
-        print("Memory cleared!")
+        print("Memory cleared.")
         continue
 
     bot_response = get_bot_response(user_input)
