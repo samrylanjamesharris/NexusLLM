@@ -27,7 +27,7 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
    ```bash
     pip install ctransformers
 
-3. Download the model (automatically on first run, or manually):
+3. Download the model:
 - Auto-download: Just run the script. It'll automatically start downloading when you run the script.
 
 That's it, you're basically done.
