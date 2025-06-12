@@ -10,6 +10,7 @@ A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for qu
 ### Prerequisites
 - Python 3.10+  
 - 8GB+ RAM
+- Visual Studio Code (Optional but is recommended to tweaking the script)
 
 ## Recommended Models:
 - Small: Mistral-7B
