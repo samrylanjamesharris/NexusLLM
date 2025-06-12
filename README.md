@@ -29,3 +29,7 @@ A lightweight, privacy-focused AI poweredlocally on your machine. Perfect for qu
 3. Download the model (automatically on first run, or manually):
 - Auto-download: Just run the script. It'll automatically start downloading when you run the script.
 place it in the project folder.
+
+# Example:
+![aiexample](https://github.com/user-attachments/assets/9f636660-9884-472e-88c6-5f107bc1ee1c)
+
