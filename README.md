@@ -52,7 +52,7 @@ Follow the same steps as before, Same process.
 ## Chat Example / Terminal - Mistral-7B Model:
 ![aiexample](https://github.com/user-attachments/assets/9f636660-9884-472e-88c6-5f107bc1ee1c)
 
-## Chat Example / HTML Form - Mistral-7B Model:
+## Chat Example / HTML Form - Mistral 7B Instruct Model:
 ![Screenshot_20250615_012152](https://github.com/user-attachments/assets/7b5c989b-b6ca-4ce2-abc7-f1e083a41f86)
 
 
