@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusLLM Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header">
+                <div class="logo">
+                    <h1>Nexus<span>LLM</span></h1>
+                </div>
+                <div class="model-info">
+                    <div class="model-details">
+                        <div class="model-name">{{ model_name }}</div>
+                        <div class="model-stats">
+                            <span><i class="fa-solid fa-gears"></i> {{ threads }} threads</span>
+                            <span><i class="fa-solid fa-memory"></i> {{ context_length }} tokens</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features">
+                <h3>Features</h3>
+                <ul>
+                    <li><i class="fa-solid fa-microchip"></i> Local processing</li>
+                    <li><i class="fa-solid fa-bolt"></i> Fast responses</li>
+                    <li><i class="fa-solid fa-lock"></i> Privacy focused</li>
+                    <li><i class="fa-solid fa-infinity"></i> Continuous context</li>
+                </ul>
+            </div>
+            
+            <div class="instructions">
+                <h3>Commands</h3>
+                <div class="commands">
+                    <div class="command"><span>Clear</span> Reset chat</div>
+                    <div class="command"><span>Exit</span> Close app</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-container">
+            <div id="chat-messages">
+                <div class="message assistant">
+                    <div class="avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="content">
+                        <div class="role">NexusLLM</div>
+                        <div class="text">Hello! I'm your local AI assistant. How can I help you today?</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        id="user-input" 
+                        placeholder="Message NexusLLM..." 
+                        autocomplete="off"
+                    >
+                    <button id="send-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="controls">
+                    <button id="clear-btn">
+                        <i class="fa-solid fa-trash-can"></i> Clear Chat
+                    </button>
+                    <button id="theme-btn">
+                        <i class="fa-solid fa-moon"></i> Theme
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatContainer = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        const themeBtn = document.getElementById('theme-btn');
+        
+        let chatHistory = [];
+        let isDarkMode = true;
+        
+        function addMessage(role, content) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${role}`;
+            
+            const avatarIcon = role === 'user' ? 'fa-user' : 'fa-robot';
+            
+            messageDiv.innerHTML = `
+                <div class="avatar">
+                    <i class="fa-solid ${avatarIcon}"></i>
+                </div>
+                <div class="content">
+                    <div class="role">${role === 'user' ? 'You' : 'NexusLLM'}</div>
+                    <div class="text">${content}</div>
+                </div>
+            `;
+            
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+        
+        async function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
+            
+            addMessage('user', message);
+            userInput.value = '';
+            userInput.focus();
+            
+            if (message.toLowerCase() === 'exit' || message.toLowerCase() === 'quit') {
+                addMessage('assistant', 'Goodbye! Closing the chat...');
+                setTimeout(() => { window.close() }, 1500);
+                return;
+            }
+            
+            if (message.toLowerCase() === 'clear') {
+                chatHistory = [];
+                chatContainer.innerHTML = '';
+                addMessage('assistant', 'Conversation history cleared');
+                return;
+            }
+            
+            try {
+                const loadingMsg = document.createElement('div');
+                loadingMsg.className = 'message assistant thinking';
+                loadingMsg.innerHTML = `
+                    <div class="avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="content">
+                        <div class="role">NexusLLM</div>
+                        <div class="text"><div class="typing-indicator"><span></span><span></span><span></span></div></div>
+                    </div>
+                `;
+                chatContainer.appendChild(loadingMsg);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+                
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        message: message,
+                        history: chatHistory
+                    })
+                });
+                
+                chatContainer.removeChild(loadingMsg);
+                
+                const data = await response.json();
+                chatHistory = data.history;
+                addMessage('assistant', data.response);
+            } catch (error) {
+                addMessage('assistant', `Error: ${error.message}`);
+            }
+        }
+        
+        function toggleTheme() {
+            isDarkMode = !isDarkMode;
+            document.body.classList.toggle('light-mode', !isDarkMode);
+            themeBtn.innerHTML = isDarkMode ? 
+                '<i class="fa-solid fa-moon"></i> Theme' : 
+                '<i class="fa-solid fa-sun"></i> Theme';
+        }
+        
+        // Event listeners
+        sendBtn.addEventListener('click', sendMessage);
+        clearBtn.addEventListener('click', () => {
+            chatHistory = [];
+            chatContainer.innerHTML = '';
+            addMessage('assistant', 'Chat cleared. Start a new conversation!');
+        });
+        themeBtn.addEventListener('click', toggleTheme);
+        
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+        
+        window.onload = () => {
+            userInput.focus();
+        };
+    </script>
+</body>
+</html>
