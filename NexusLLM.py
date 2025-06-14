@@ -132,4 +132,4 @@ while True:
         print("Memory cleared.")
         continue
 
-conversation_history, _ = get_bot_response(user_input, conversation_history)
+    conversation_history, _ = get_bot_response(user_input, conversation_history)
