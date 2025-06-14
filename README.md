@@ -13,8 +13,8 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 - Visual Studio Code (Optional but is recommended to tweaking the script)
 
 ## Recommended Models:
-- Small: Mistral-7B
-- Large: Llama-2-13B
+- Mistral-7B - 4GB
+- Llama-2-13B - 7GB
 
 ### Steps:
 1. Clone the repo:  
