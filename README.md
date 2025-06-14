@@ -33,6 +33,25 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 That's it, you're basically done.
 Just make sure to tweak the script so it matches your system, for example the threads its using and models. If you're not happy with the models you can switch them out by just going to Hugging Face and looking for models that are supported by ctransformers.
 
-## Chat Example - Mistral-7B Model:
+### Web Steps:
+Follow the same steps as before, Same process.
+1. Clone the repo.
+2. Install dependencies
+
+   ```bash
+   pip install ctransformers
+   pip install flask
+   
+4. Run the script, automatically downloads model.
+5. It runs the backbone of the entire thing and hosts the local script.
+6. Go to your web browser and paste in
+   ```bash
+   http://localhost:5000
+
+## Chat Example / Terminal - Mistral-7B Model:
 ![aiexample](https://github.com/user-attachments/assets/9f636660-9884-472e-88c6-5f107bc1ee1c)
+
+## Chat Example / HTML Form - Mistral-7B Model:
+![Screenshot_20250615_012152](https://github.com/user-attachments/assets/7b5c989b-b6ca-4ce2-abc7-f1e083a41f86)
+
 
