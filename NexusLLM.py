@@ -3,26 +3,31 @@ import sys
 import re
 
 print("\nRecommended Models:")
-print("1. Mistral-7B - 4GB")
-print("2. Llama-2-13B - 7GB")
+print("1. Llama-2 7B")
+print("2. Llama-2 13B")
+print("3. Mistral 7B Instruct")
 
 choice = ""
-while choice not in ["1", "2"]:
-    choice = input("Select model (1-2): ").strip()
-    if choice not in ["1", "2"]:
-        print("Invalid choice. Please enter 1 or 2.")
+while choice not in ["1", "2", "3"]:
+    choice = input("Select model (1-3): ").strip()
+    if choice not in ["1", "2", "3"]:
+        print("Invalid choice. Please enter 1, 2, or 3.")
 
 if choice == "1":
-    MODEL_NAME = "TheBloke/Mistral-7B-v0.1-GGUF"
-    MODEL_FILE = "mistral-7b-v0.1.Q4_K_M.gguf"
-    MODEL_TYPE = "mistral"
-else:
+    MODEL_NAME = "TheBloke/Llama-2-7B-Chat-GGUF"
+    MODEL_FILE = "llama-2-7b-chat.Q4_K_M.gguf"
+    MODEL_TYPE = "llama"
+elif choice == "2":
     MODEL_NAME = "TheBloke/Llama-2-13B-GGUF"
     MODEL_FILE = "llama-2-13b.Q4_K_M.gguf"
     MODEL_TYPE = "llama"
+else:
+    MODEL_NAME = "TheBloke/Mistral-7B-Instruct-v0.1-GGUF"
+    MODEL_FILE = "mistral-7b-instruct-v0.1.Q4_K_M.gguf"
+    MODEL_TYPE = "mistral"
 
 GPU_LAYERS = 0
-MAX_NEW_TOKENS = 75
+MAX_NEW_TOKENS = 256
 CONTEXT_LENGTH = 4096
 TEMPERATURE = 0.5
 TOP_K = 40
@@ -49,10 +54,9 @@ except Exception as e:
 
 conversation_history = []
 INITIAL_PROMPT = (
-    "You are NexusLLM, a helpful and concise AI assistant. "
-    "Your purpose is to provide accurate information and complete tasks as instructed. "
-    "You always respond as NexusLLM, Never mimic the user. Never respond using, '<||>', '</s>', "
-    "<|nexusllm|>, <|user|>, or <|assistant|>. Keep your responses brief and to the point, always one sentence."
+    "You are NexusLLM, a concise and helpful assistant. "
+    "You must never include any of the following in your responses: <||>, </s>, <|nexusllm|>, <|user|>, <|assistant|>, or any special formatting tokens. "
+    "Only respond with natural, human-like, plain text. Keep it short and clear."
 )
 
 def sanitize_response(response):
@@ -113,15 +117,16 @@ def get_bot_response(user_input, history):
     history.append({"role": "bot", "content": bot_response})
     return history, bot_response
 
-print("NexusLLM - Multi-Model:")
+print("NexusLLM:")
 print(f"Model: {MODEL_NAME}")
 print(f"Threads: {THREADS} | Context: {CONTEXT_LENGTH} tokens | GPU Layers: {GPU_LAYERS}")
 print("Type, 'exit' or 'quit' to close the AI chat. Type, 'clear' to reset the chat.")
 if choice == "1":
-    print("\nMistral can generate responses that give coherent, as well as giving somewhat correct information. ")
-else:
-    print("\nFor top-of-the-line responses, Llama 2 is great for generating responses that are coherent. "
-          "Although, the time to respond may take a while since it is a larger model.\n")
+    print("\nLlama 2 7B model is good for generating coherent responses as well as following instructions and is trained for chatting.\n")
+if choice == "2":
+    print("\nLlama 2 13B model is good for top-of-the-line responses. Although, the time to respond may take a while since it is a larger model.\n")
+if choice == "3":
+    print("\nMistral 7B model is good for performance and is newer than Llama 2. It is good for lower end systems and is lite on RAM.\n")
 
 while True:
     user_input = input("You: ")
