@@ -55,5 +55,9 @@ Follow the same steps as before, Same process.
 ## Chat Example / HTML Form - Mistral 7B Instruct Model:
 ![Screenshot_20250615_140930](https://github.com/user-attachments/assets/04a36b2a-2783-46f8-af23-b094aa17b24c)
 
+## Tutorial - Sorry for the random black bar, IP was in terminal:
+[![Watch the Tutorial](https://img.youtube.com/vi/6J8JCBvUyhY/maxresdefault.jpg)](https://www.youtube.com/watch?v=6J8JCBvUyhY)
+
+
 
 
