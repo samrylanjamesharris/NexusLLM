@@ -138,3 +138,13 @@ while True:
         continue
 
     conversation_history, _ = get_bot_response(user_input, conversation_history)
+
+def build_prompt(history):
+    prompt = f"{INITIAL_PROMPT}\n\n"
+    for msg in history:
+        if msg["role"] == "user":
+            prompt += f"User: {msg['content']}\n"
+        elif msg["role"] == "bot":
+            prompt += f"NexusLLM: {msg['content']}\n"
+    prompt += "NexusLLM:"
+    return prompt
