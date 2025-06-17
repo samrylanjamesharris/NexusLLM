@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexusLLM</title>
+    <title>NexusLLM Chat:</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -29,8 +29,8 @@
             <div class="features">
                 <h3>Features</h3>
                 <ul>
-                    <li><i class="fa-solid fa-microchip"></i> Local processing</li>
-                    <li><i class="fa-solid fa-bolt"></i> Fast responses</li>
+                    <li><i class="fa-solid fa-microchip"></i> Local AI</li>
+                    <li><i class="fa-solid fa-bolt"></i> Reliable responses</li>
                     <li><i class="fa-solid fa-lock"></i> Privacy focused</li>
                     <li><i class="fa-solid fa-infinity"></i> Continuous context</li>
                 </ul>
@@ -121,7 +121,7 @@
             userInput.focus();
             
             if (message.toLowerCase() === 'exit' || message.toLowerCase() === 'quit') {
-                addMessage('assistant', 'Goodbye! Closing the chat...');
+                addMessage('assistant', 'Closed the chat...');
                 setTimeout(() => { window.close() }, 1500);
                 return;
             }
@@ -179,7 +179,7 @@
         clearBtn.addEventListener('click', () => {
             chatHistory = [];
             chatContainer.innerHTML = '';
-            addMessage('assistant', 'Chat cleared. Start a new conversation!');
+            addMessage('assistant', 'Chat cleared.');
         });
         themeBtn.addEventListener('click', toggleTheme);
         
