@@ -10,7 +10,7 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 ### Prerequisites
 - Python 3.10+  
 - 8GB+ RAM
-- Visual Studio Code (Optional but is recommended to tweaking the script)
+- Visual Studio Code
 
 ## Recommended Models:
 - Llama-2 7B - 4GB
