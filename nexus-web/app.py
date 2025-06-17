@@ -4,19 +4,11 @@ import re
 import os
 
 app = Flask(__name__)
-MODEL_CHOICE = os.getenv('MODEL_CHOICE', '3')
+MODEL_CHOICE = os.getenv('MODEL_CHOICE', '1')
 GPU_LAYERS = int(os.getenv('GPU_LAYERS', '0'))
 THREADS = int(os.getenv('THREADS', '12'))
 
 if MODEL_CHOICE == '1':
-    MODEL_NAME = "TheBloke/Llama-2-7B-Chat-GGUF"
-    MODEL_FILE = "llama-2-7b-chat.Q4_K_M.gguf"
-    MODEL_TYPE = "llama"
-elif MODEL_CHOICE == '2':
-    MODEL_NAME = "TheBloke/Llama-2-13B-GGUF"
-    MODEL_FILE = "llama-2-13b.Q4_K_M.gguf"
-    MODEL_TYPE = "llama"
-else:
     MODEL_NAME = "TheBloke/Mistral-7B-Instruct-v0.1-GGUF"
     MODEL_FILE = "mistral-7b-instruct-v0.1.Q4_K_M.gguf"
     MODEL_TYPE = "mistral"
@@ -74,9 +66,7 @@ def build_prompt(history):
 @app.route('/')
 def index():
     model_info = {
-        '1': "Llama-2 7B: Coherent Responses)",
-        '2': "Llama-2 13B: High Quality)",
-        '3': "Mistral 7B: Lightweight"
+        '1': "Mistral 7B: Fast, Lightweight. "
     }
     return render_template('index.html', 
                            model_name=model_info[MODEL_CHOICE],
