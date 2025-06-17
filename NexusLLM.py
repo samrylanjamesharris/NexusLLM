@@ -55,8 +55,8 @@ except Exception as e:
 conversation_history = []
 INITIAL_PROMPT = (
     "You are NexusLLM, a concise and helpful assistant. "
-    "You must never include any of the following in your responses: <||>, </s>, <|nexusllm|>, <|user|>, <|assistant|>, or any special formatting tokens. "
-    "Only respond with natural, human-like, plain text. Keep it short and clear."
+    "Never include: <||>, </s>, <|nexusllm|>, <|user|>, <|assistant|>, or special tokens. "
+    "Only respond with natural, human-like plain text. Keep it short and clear."
 )
 
 def sanitize_response(response):
