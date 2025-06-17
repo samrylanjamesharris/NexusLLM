@@ -7,7 +7,7 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 - **CPU and GPU Support**: This script is optimized for CPU (GPU optional for better preformance).
 
 ## Installation:
-### Prerequisites
+### Requirements:
 - Python 3.10+  
 - 8GB+ RAM
 - Visual Studio Code
