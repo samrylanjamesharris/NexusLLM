@@ -12,4 +12,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Send it to the issues and we will get to work on it as soon as possable 
+Send it to the issues and we will get to work on it asap
