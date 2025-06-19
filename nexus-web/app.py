@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from ctransformers import AutoModelForCausalLM
 import re
 import os
+import logging
 
 app = Flask(__name__)
 MODEL_CHOICE = os.getenv('MODEL_CHOICE', '1')
@@ -96,8 +97,13 @@ def chat():
         if any(token in bot_response for token in ['</s>', '<|']):
             bot_response = "[SYSTEM: Invalid tokens detected - response purged]"
     except Exception as e:
-        bot_response = f"[SYSTEM: Error - {str(e)}]"
-    history.append({"role": "assistant", "content": bot_response})
+        import logging
+        logging.error("An error occureded during model 
+processing", exc_info=True
+        bot_response = "[SYSTEM: An internal error has
+occurred. Please try again later.]"
+    history.append({"role": "assistant", "content":
+bot_response})
     
     return jsonify({
         'response': bot_response,
@@ -105,4 +111,6 @@ def chat():
     })
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.ERROR, format='%
+(asctime)s - %(levelname)s - %(message)s')
     app.run(host='0.0.0.0', port=5000, debug=false)
