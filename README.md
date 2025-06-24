@@ -15,7 +15,7 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 ## Recommended Models:
 - Llama-2 7B - 4GB
 - Llama-2 13B - 7GB
-- Mistral 7B Instruct - 4GB
+- Mistral 2.5 7B - 4GB
 
 #### If you have AI models that preform better than these, list them in the Issues tab in order to let us know.
 
