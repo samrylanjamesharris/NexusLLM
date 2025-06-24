@@ -5,7 +5,7 @@ import re
 print("\nRecommended Models:")
 print("1. Llama-2 7B")
 print("2. Llama-2 13B")
-print("3. Mistral 7B Instruct")
+print("3. Mistral 2.5 7B")
 
 choice = ""
 while choice not in ["1", "2", "3"]:
@@ -22,14 +22,14 @@ elif choice == "2":
     MODEL_FILE = "llama-2-13b.Q4_K_M.gguf"
     MODEL_TYPE = "llama"
 else:
-    MODEL_NAME = "TheBloke/Mistral-7B-Instruct-v0.1-GGUF"
-    MODEL_FILE = "mistral-7b-instruct-v0.1.Q4_K_M.gguf"
+    MODEL_NAME = "TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF"
+    MODEL_FILE = "capybarahermes-2.5-mistral-7b.Q4_K_M.gguf"
     MODEL_TYPE = "mistral"
 
 GPU_LAYERS = 0
 MAX_NEW_TOKENS = 256
 CONTEXT_LENGTH = 4096
-TEMPERATURE = 1.0
+TEMPERATURE = 0.5
 TOP_K = 40
 TOP_P = 0.85
 THREADS = 12
@@ -126,7 +126,7 @@ if choice == "1":
 if choice == "2":
     print("\nLlama 2 13B model is good for top-of-the-line responses. Although, the time to respond may take a while since it is a larger model.\n")
 if choice == "3":
-    print("\nMistral 7B model is good for performance and is newer than Llama 2. It is good for lower end systems and is lite on RAM.\n")
+    print("\nMistral 2.5 7B model is good for performance and is newer than Llama 2. It is good for lower end systems and is lite on RAM.\n")
 
 while True:
     user_input = input("You: ")
