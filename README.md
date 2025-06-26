@@ -17,7 +17,7 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 - Python 3.10
 - 8GB RAM
 - Visual Studio Code
-- Intel Core i5-10400 - (12 Threads - 6 Cores)
+- AMD Ryzen 5 3400G - (8 Threads - 4 Cores)
 
 
 ## Recommended Models:
