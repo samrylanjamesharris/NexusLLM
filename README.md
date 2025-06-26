@@ -7,10 +7,18 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 - **CPU and GPU Support**: This script is optimized for CPU (GPU optional for better preformance).
 
 ## Installation:
-### Requirements:
-- Python 3.10+  
-- 8GB+ RAM
+### Requirements Recommended:
+- Python 3.11  
+- 16GB RAM
 - Visual Studio Code
+- AMD Ryzen 5600G - (12 Threads - 6 Cores)
+
+### Requirments Minimum:
+- Python 3.10
+- 8GB RAM
+- Visual Studio Code
+- Intel Core i5-10400 - (12 Threads - 6 Cores)
+
 
 ## Recommended Models:
 - Llama-2 7B - 4GB
