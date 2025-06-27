@@ -12,12 +12,13 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 - 16GB RAM
 - Visual Studio Code
 - AMD Ryzen 5600G - (12 Threads - 6 Cores)
+- Any GPU any brand
 
 ### Requirments Minimum:
 - Python 3.10
-- 8GB RAM
+- 4GB RAM
 - Visual Studio Code
-- AMD Ryzen 5 3400G - (8 Threads - 4 Cores)
+- AMD Athlon Silver 7120U (2 Cores - 2 Threads)
 
 
 ## Recommended Models:
