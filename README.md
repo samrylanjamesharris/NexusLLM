@@ -66,6 +66,6 @@ Follow the same steps as before, Same process.
 ## Chat Example / HTML Form - Mistral 7B Instruct Model:
 ![Screenshot_20250615_140930](https://github.com/user-attachments/assets/04a36b2a-2783-46f8-af23-b094aa17b24c)
 
-
-
+## Guide For VSC
+![Screenshot_20250615_140930](https://youtu.be/c0v6siXTxxU)
 
