@@ -3,8 +3,9 @@
 A lightweight, privacy-focused AI powered entirely on your machine. Perfect for quick, AI interactions without relying on cloud APIs. You don't need any API key or anything to run this, once you follow the steps and run the script everything will automatically install on your system and can even run it offline without needing any internet connection. 
 
 ## Features:
-- **Local & Private**: No data leaves your system, all of it stays there only. 
+- **Local**: No data leaves your system, all of it stays there only and runs completely on your syetem. 
 - **CPU and GPU Support**: This script is optimized for CPU (GPU optional for better preformance).
+- **Visual Studio Code**: You can use Viusal Studio Code to edit and the file in and out for more useability.
 
 ## Installation:
 ### Requirements Recommended:
@@ -12,7 +13,6 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 - 16GB RAM
 - Visual Studio Code
 - AMD Ryzen 5600G - (12 Threads - 6 Cores)
-- Any GPU any brand
 
 ### Requirments Minimum:
 - Python 3.10
@@ -22,9 +22,9 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 
 
 ## Recommended Models:
-- Llama-2 7B - 4GB
-- Llama-2 13B - 7GB
-- Mistral 2.5 7B - 4GB
+- Llama 2 7B / 4GB
+- Llama 2 13B / 7GB
+- Mistral 2.5 7B / 4GB - *Recomended*
 
 #### If you have AI models that preform better than these, list them in the Issues tab in order to let us know.
 
@@ -35,7 +35,6 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
    cd NexusLLM
    
 2. Install dependencies:
-
    ```bash
     pip install ctransformers
 
@@ -60,12 +59,13 @@ Follow the same steps as before, Same process.
    ```bash
    http://localhost:5000
 
-## Chat Example / Terminal - Mistral-7B Model:
+## Chat Example / Terminal - Mistral 7B Model:
 ![aiexample](https://github.com/user-attachments/assets/9f636660-9884-472e-88c6-5f107bc1ee1c)
 
-## Chat Example / HTML Form - Mistral 7B Instruct Model:
+## Chat Example / HTML Form - Mistral Instruct 7B Model:
 ![Screenshot_20250615_140930](https://github.com/user-attachments/assets/04a36b2a-2783-46f8-af23-b094aa17b24c)
 
-## Guide For VSC
-https://youtu.be/c0v6siXTxxU
+## Visual Guide For Visual Studio Code:
+If you need a visual guide, click [here](https://youtu.be/c0v6siXTxxU) and follow the steps provided by Ethan.
 
+<img width="854" height="480" alt="Mistral 2 5 7B" src="https://github.com/user-attachments/assets/4a3d1a8b-a6b8-469c-b646-f24066c7309f" />
