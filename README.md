@@ -18,7 +18,7 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 - Python 3.10
 - 4GB RAM
 - Visual Studio Code
-- AMD Athlon Silver 7120U (2 Cores - 2 Threads)
+- AMD Athlon Silver 7120U - (2 Cores - 2 Threads)
 
 
 ## Recommended Models:
