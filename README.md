@@ -22,7 +22,7 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 
 
 ## Recommended Models:
-- Llama 2 7B / 4GB
+- TinyLlama 1.1B / 668MB
 - Llama 2 13B / 7GB
 - Mistral 2.5 7B / 4GB - *Recomended*
 
