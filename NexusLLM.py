@@ -3,8 +3,8 @@ import sys
 import re
 
 print("\nRecommended Models:")
-print("1. Llama-2 7B")
-print("2. Llama-2 13B")
+print("1. TinyLlama 1.1B")
+print("2. Llama 2 13B")
 print("3. Mistral 2.5 7B")
 
 choice = ""
@@ -14,9 +14,9 @@ while choice not in ["1", "2", "3"]:
         print("Invalid choice. Please enter 1, 2, or 3.")
 
 if choice == "1":
-    MODEL_NAME = "TheBloke/Llama-2-7B-Chat-GGUF"
-    MODEL_FILE = "llama-2-7b-chat.Q4_K_M.gguf"
-    MODEL_TYPE = "llama"
+    MODEL_NAME = "TheBloke/TinyLlama-1.1B-Chat-v0.3-GGUF"
+    MODEL_FILE = "tinyllama-1.1b-chat-v0.3.Q4_K_M.gguf"
+    MODEL_TYPE = "tinyllama"
 elif choice == "2":
     MODEL_NAME = "TheBloke/Llama-2-13B-GGUF"
     MODEL_FILE = "llama-2-13b.Q4_K_M.gguf"
@@ -29,7 +29,7 @@ else:
 GPU_LAYERS = 0
 MAX_NEW_TOKENS = 256
 CONTEXT_LENGTH = 4096
-TEMPERATURE = 0.5
+TEMPERATURE = 0.7
 TOP_K = 40
 TOP_P = 0.85
 THREADS = 12
@@ -125,9 +125,9 @@ print(f"Model: {MODEL_NAME}")
 print(f"Threads: {THREADS} | Context: {CONTEXT_LENGTH} tokens | GPU Layers: {GPU_LAYERS}")
 print("Type, 'exit' or 'quit' to close the AI chat. Type, 'clear' to reset the chat.")
 if choice == "1":
-    print("\nLlama 2 7B model is good for generating coherent responses as well as following instructions and is trained for chatting.\n")
+    print("\nTinyLlama 1.1B is the smallest model supported on ctransformers and is VERY lightweight. This is ideal for fast responses and questions.\n")
 if choice == "2":
-    print("\nLlama 2 13B model is good for top-of-the-line responses. Although, the time to respond may take a while since it is a larger model.\n")
+    print("\nLlama 2 13B model is good for top-of-the-line responses. But, in order to use this model you need the recommended specifications.\n")
 if choice == "3":
     print("\nMistral 2.5 7B model is good for performance and is newer than Llama 2. It is good for lower end systems and is lite on RAM.\n")
 
