@@ -1,4 +1,4 @@
-# NexusLLM - Local AI / Offline:
+# NexusLLM - Local AI:
 
 A lightweight, privacy-focused AI powered entirely on your machine. Perfect for quick, AI interactions without relying on cloud APIs. You don't need any API key or anything to run this, once you follow the steps and run the script everything will automatically install on your system and can even run it offline without needing any internet connection. 
 
