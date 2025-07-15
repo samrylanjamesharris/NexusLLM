@@ -5,7 +5,7 @@ import re
 print("\nRecommended Models:")
 print("1. TinyLlama 1.1B")
 print("2. Llama 2 13B")
-print("3. Mistral 2.5 7B")
+print("3. Mistral 2.5 7B - Recommened")
 
 choice = ""
 while choice not in ["1", "2", "3"]:
@@ -56,7 +56,7 @@ conversation_history = []
 INITIAL_PROMPT = (
     "You are NexusLLM, a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. "
     "Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. "
-    "Please ensure that your responses are socially unbiased and positive in nature. If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. " 
+    "Please ensure that your responses are socially unbiased and positive in nature. " 
     "If you don't know the answer to a question, please don't share false information."
     "Never include: <||>, </s>, <|nexusllm|>, <|user|>, <|assistant|>, or special tokens. "
     "Only respond with natural, human-like plain text. Keep it short and clear."
@@ -102,7 +102,7 @@ def get_bot_response(user_input, history):
             top_k=TOP_K,
             top_p=TOP_P,
             repetition_penalty=1.3,
-            stop=['</s>', '<|'],
+            stop=['</s>', '<|', '<|nexusllm|>', '<|user|>', '<|assistant|>]', '<|system|>']
             stream=True
         ):
             print(token, end="", flush=True)
