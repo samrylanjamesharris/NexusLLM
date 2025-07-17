@@ -28,7 +28,7 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 
 #### If you have AI models that preform better than these, list them in the Issues tab in order to let us know.
 
-### Steps:
+## Steps:
 1. Clone the repo:  
    ```bash
    git clone https://github.com/samrylanjamesharris/NexusLLM.git
