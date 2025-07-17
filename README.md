@@ -8,13 +8,13 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 - **Visual Studio Code**: You can use Viusal Studio Code to edit and the file in and out for more useability.
 
 ## Installation:
-### Requirements Recommended:
+### Requirements - Recommended:
 - Python 3.11  
 - 16GB RAM
 - Visual Studio Code
 - AMD Ryzen 5600G - (12 Threads - 6 Cores)
 
-### Requirments Minimum:
+### Requirments - Minimum:
 - Python 3.10
 - 4GB RAM
 - Visual Studio Code
@@ -22,9 +22,9 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 
 
 ## Recommended Models:
-- TinyLlama 1.1B / 668MB
-- Llama 2 13B / 7GB
-- Mistral 2.5 7B / 4GB - *Recomended*
+- TinyLlama 1.1B / 668MB - *Smallest Model*
+- Llama 2 13B / 7GB - *Biggest Model*
+- Mistral 2.5 7B / 4GB - *Recomended Model*
 
 #### If you have AI models that preform better than these, list them in the Issues tab in order to let us know.
 
@@ -39,10 +39,10 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
     pip install ctransformers
 
 3. Download the model:
-- Auto-download: Just run the script. It'll automatically start downloading when you run the script.
+- Auto-download: Just run the script. Pick a model out of the selection, it'll automatically start downloading when you select one.
 
 That's it, you're basically done.
-Just make sure to tweak the script so it matches your system, for example the threads its using and models. If you're not happy with the models you can switch them out by just going to Hugging Face and looking for models that are supported by ctransformers. I use TheBloke's models which work 100% of the time, of course, you can use other ones.
+Make sure to tweak the script so it matches your system or preferences, it could be switching out the model or setting the temperture on the model. If you're not happy with the models already in the script, you can switch them out by just going to Hugging Face and looking for models that are supported by ctransformers. I use TheBloke's models which work 100% of the time, of course, you can use other ones if you want to.
 
 ## Chat Example / Terminal - Mistral 7B Model:
 ![aiexample](https://github.com/user-attachments/assets/9f636660-9884-472e-88c6-5f107bc1ee1c)
