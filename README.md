@@ -47,8 +47,3 @@ If you're not happy with the models already in the script, you can switch them o
 
 ## Chat Example / Terminal - Mistral 7B Model:
 ![aiexample](https://github.com/user-attachments/assets/9f636660-9884-472e-88c6-5f107bc1ee1c)
-
-## Guide For Visual Studio Code:
-If you need a visual guide, click [here](https://youtu.be/c0v6siXTxxU) and follow the steps provided in the video by Ethan.
-
-<img width="854" height="480" alt="Mistral 2 5 7B" src="https://github.com/user-attachments/assets/4a3d1a8b-a6b8-469c-b646-f24066c7309f" />
