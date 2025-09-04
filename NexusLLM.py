@@ -1,11 +1,12 @@
-from ctransformers import AutoModelForCausalLM
 import sys
 import re
+from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer
+import torch
 
 print("\nRecommended Models:")
 print("1. TinyLlama 1.1B")
 print("2. Llama 2 13B")
-print("3. Mistral 2.5 7B - Recommened")
+print("3. Mistral 2.5 7B - Recommended")
 
 choice = ""
 while choice not in ["1", "2", "3"]:
@@ -13,40 +14,44 @@ while choice not in ["1", "2", "3"]:
     if choice not in ["1", "2", "3"]:
         print("Invalid choice. Please enter 1, 2, or 3.")
 
-if choice == "1":
-    MODEL_NAME = "TheBloke/TinyLlama-1.1B-Chat-v0.3-GGUF"
-    MODEL_FILE = "tinyllama-1.1b-chat-v0.3.Q4_K_M.gguf"
-    MODEL_TYPE = "tinyllama"
-elif choice == "2":
-    MODEL_NAME = "TheBloke/Llama-2-13B-GGUF"
-    MODEL_FILE = "llama-2-13b.Q4_K_M.gguf"
-    MODEL_TYPE = "llama"
-else:
-    MODEL_NAME = "TheBloke/CapybaraHermes-2.5-Mistral-7B-GGUF"
-    MODEL_FILE = "capybarahermes-2.5-mistral-7b.Q4_K_M.gguf"
-    MODEL_TYPE = "mistral"
+MODEL_MAP = {
+    "1": {
+        "name": "TinyLlama/TinyLlama-1.1B-Chat-v0.3",
+        "type": "tinyllama",
+        "note": "\nTinyLlama 1.1B is the smallest model supported and is VERY lightweight. This is ideal for fast responses and questions.\n",
+    },
+    "2": {
+        "name": "meta-llama/Llama-2-13b-hf",
+        "type": "llama",
+        "note": "\nLlama 2 13B model is good for top-of-the-line responses. But, in order to use this model you need the recommended specifications.\n",
+    },
+    "3": {
+        "name": "TheBloke/Mistral-7B-v0.2-HF",
+        "type": "mistral",
+        "note": "\nMistral 2.5 7B model is good for performance and is newer than Llama 2. It is good for lower end systems and is lite on RAM.\n",
+    },
+}
 
-GPU_LAYERS = 0
+selected = MODEL_MAP[choice]
+MODEL_NAME = selected["name"]
+MODEL_TYPE = selected["type"]
+note = selected["note"]
+
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+DTYPE = torch.float16 if DEVICE == "cuda" else torch.float32
 MAX_NEW_TOKENS = 256
 CONTEXT_LENGTH = 4096
 TEMPERATURE = 0.7
 TOP_K = 40
 TOP_P = 0.85
-THREADS = 12
 HISTORY_LIMIT = 3
 
 print("\nLoading Model...")
 
 try:
-    model = AutoModelForCausalLM.from_pretrained(
-        MODEL_NAME,
-        model_file=MODEL_FILE,
-        model_type=MODEL_TYPE,
-        gpu_layers=GPU_LAYERS,
-        context_length=CONTEXT_LENGTH,
-        threads=THREADS,
-        batch_size=128,
-    )
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    model = AutoModelForCausalLM.from_pretrained(MODEL_NAME, dtype=DTYPE)
+    model = model.to(DEVICE)
     print("Model loaded successfully!\n")
 except Exception as e:
     print(f"Error loading model: {e}")
@@ -56,7 +61,7 @@ conversation_history = []
 INITIAL_PROMPT = (
     "You are NexusLLM, a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. "
     "Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. "
-    "Please ensure that your responses are socially unbiased and positive in nature. " 
+    "Please ensure that your responses are socially unbiased and positive in nature. "
     "If you don't know the answer to a question, please don't share false information."
     "Never include: <||>, </s>, <|nexusllm|>, <|user|>, <|assistant|>, or special tokens. "
     "Only respond with natural, human-like plain text. Keep it short and clear."
@@ -80,11 +85,13 @@ def trim_history(history):
     return history
 
 def build_prompt(history):
-    prompt = f"<|system|>{INITIAL_PROMPT}</s>\n"
+    prompt = f"{INITIAL_PROMPT}\n\n"
     for msg in history:
-        role = "nexusllm" if msg["role"] == "bot" else "user"
-        prompt += f"<|{role}|>{msg['content']}</s>\n"
-    prompt += "<|nexusllm|>"
+        if msg["role"] == "user":
+            prompt += f"User: {msg['content']}\n"
+        elif msg["role"] == "bot":
+            prompt += f"NexusLLM: {msg['content']}\n"
+    prompt += "NexusLLM:"
     return prompt
 
 def get_bot_response(user_input, history):
@@ -92,27 +99,30 @@ def get_bot_response(user_input, history):
     history = trim_history(history)
     prompt = build_prompt(history)
 
+    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=CONTEXT_LENGTH).to(DEVICE)
+    streamer = TextStreamer(tokenizer, skip_prompt=True, skip_special_tokens=True)
     bot_response = ""
+
     print("NexusLLM: ", end="", flush=True)
     try:
-        for token in model(
-            prompt,
+        output_ids = model.generate(
+            **inputs,
             max_new_tokens=MAX_NEW_TOKENS,
             temperature=TEMPERATURE,
             top_k=TOP_K,
             top_p=TOP_P,
             repetition_penalty=1.3,
-            stop=['</s>', '<|', '<|nexusllm|>', '<|user|>', '<|assistant|>]', '<|system|>']
-            stream=True
-        ):
-            print(token, end="", flush=True)
-            bot_response += token
-        print()
+            streamer=streamer,
+            do_sample=True,
+            eos_token_id=tokenizer.eos_token_id
+        )
+        generated_text = tokenizer.decode(output_ids[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
+        bot_response = sanitize_response(generated_text)
+        print(bot_response)
     except Exception as e:
         print(f"\nGeneration error: {e}")
         return history, "There was an error with NexusLLM responding to your input..."
 
-    bot_response = sanitize_response(bot_response)
     if any(bad_token in bot_response for bad_token in ['</s>', '<|']):
         bot_response = "[SYSTEM ERROR: Invalid tokens detected - response purged]"
         print("\nWARNING: Model attempted forbidden tokens!")
@@ -122,14 +132,9 @@ def get_bot_response(user_input, history):
 
 print("NexusLLM:")
 print(f"Model: {MODEL_NAME}")
-print(f"Threads: {THREADS} | Context: {CONTEXT_LENGTH} tokens | GPU Layers: {GPU_LAYERS}")
+print(f"Device: {DEVICE} | Context: {CONTEXT_LENGTH} tokens")
 print("Type, 'exit' or 'quit' to close the AI chat. Type, 'clear' to reset the chat.")
-if choice == "1":
-    print("\nTinyLlama 1.1B is the smallest model supported on ctransformers and is VERY lightweight. This is ideal for fast responses and questions.\n")
-if choice == "2":
-    print("\nLlama 2 13B model is good for top-of-the-line responses. But, in order to use this model you need the recommended specifications.\n")
-if choice == "3":
-    print("\nMistral 2.5 7B model is good for performance and is newer than Llama 2. It is good for lower end systems and is lite on RAM.\n")
+print(note)
 
 while True:
     user_input = input("You: ")
@@ -141,13 +146,3 @@ while True:
         continue
 
     conversation_history, _ = get_bot_response(user_input, conversation_history)
-
-def build_prompt(history):
-    prompt = f"{INITIAL_PROMPT}\n\n"
-    for msg in history:
-        if msg["role"] == "user":
-            prompt += f"User: {msg['content']}\n"
-        elif msg["role"] == "bot":
-            prompt += f"NexusLLM: {msg['content']}\n"
-    prompt += "NexusLLM:"
-    return prompt
