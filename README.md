@@ -1,4 +1,4 @@
-# NexusLLM - Local AI / Ctransformers:
+# NexusLLM - Local AI / Transformers:
 
 A lightweight, privacy-focused AI powered entirely on your machine. Perfect for quick, AI interactions without relying on cloud APIs. You don't need any API key or anything to run this, once you follow the steps and run the script everything will automatically install on your system and can even run it offline without needing any internet connection. 
 
@@ -36,7 +36,7 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
    
 2. Install dependencies:
    ```bash
-    pip install ctransformers
+    pip install transformers
 
 3. Download the model:
 - Auto-download: Just run the script. Pick a model out of the selection, it'll automatically start downloading when you select one.
