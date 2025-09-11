@@ -41,9 +41,9 @@ A lightweight, privacy-focused AI powered entirely on your machine. Perfect for 
 3. Download the model:
 - Auto-download: Just run the script. Pick a model out of the selection, it'll automatically start downloading when you select one.
 
-That's it, you're basically done.
-Make sure to tweak the script so it matches your system or preferences, it could be switching out the model or setting the temperture on the model. 
-If you're not happy with the models already in the script, you can switch them out by just going to Hugging Face and looking for models that are supported by ctransformers. I use TheBloke's models which work 100% of the time, of course, you can use other ones if you want to.
+That's it, you're basically done!
+Make sure to tweak the script so it matches your system or preferences, it could be switching out the model or setting the temperture on the model, etc.
+If you're not happy with the models already in the script, you can switch them out by just going to Hugging Face and looking for models that are supported by transformers. I use TheBloke's models which work 100% of the time, of course, you can use other ones if you want to.
 
 ## Chat Example / Terminal - Mistral 7B Model:
 ![aiexample](https://github.com/user-attachments/assets/9f636660-9884-472e-88c6-5f107bc1ee1c)
